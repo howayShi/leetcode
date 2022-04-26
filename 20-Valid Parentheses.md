@@ -20,11 +20,11 @@ class Solution {
 public:
     bool isValid(string s) {
         int n=s.size();
-        if(n==0){return true;}
+        if(n==0){return true;}//空列表
         stack<int> st; //建立栈
         for(char c:s) //c++遍历字符串的方式
         {
-            if(c == '(' || c == '[' || c == '{')
+            if(c == '(' || c == '[' || c == '{') //左括号，去判断右边有没有符合的右括号
             { 
                 st.push(c); //PUSH入栈，POP出栈
             }
